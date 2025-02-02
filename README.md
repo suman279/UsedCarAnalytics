@@ -28,20 +28,11 @@ Project Structure
 1️⃣ Install Dependencies
 Ensure Python and MySQL are installed, then install required Python libraries:
 
-sh
-Copy
-Edit
 pip install -r requirements.txt
 2️⃣ Database Setup
 Create a MySQL database:
-sql
-Copy
-Edit
 CREATE DATABASE car_data;
 Create the used_cars table:
-sql
-Copy
-Edit
 CREATE TABLE used_cars (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(255),
@@ -51,9 +42,6 @@ CREATE TABLE used_cars (
     transmission_type VARCHAR(50)
 );
 3️⃣ Run the Web Scraper
-sh
-Copy
-Edit
 python scraper.py
 This script fetches used car data from Cardekho and inserts it into MySQL.
 
@@ -67,14 +55,7 @@ Load data and build visualizations
 ✔️ Popular car transmission types
 ✔️ Mileage vs. price analysis
 
-
 📜 Future Enhancements
 🔹 Automate data updates with a scheduled job
 🔹 Integrate Machine Learning for price predictions
 🔹 Build an interactive web dashboard
-
-👨‍💻 Contributing
-Feel free to fork this repository and create pull requests! Contributions are always welcome.
-
-📄 License
-This project is licensed under the MIT License.
