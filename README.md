@@ -6,34 +6,31 @@ Project Overview
 This project automates the extraction, storage, and visualization of used car data. It scrapes data from Cardekho, saves it into MySQL, and generates insightful reports using Power BI.
 
 Features
-✅ Web Scraping: Extracts car details (name, price, kilometers driven, fuel type, transmission)
+✅ Web Scraping: Extracts car details (name, price, kilometers_driven, fuel_type, transmission_type, location, Car_type, model, Mileage  )
 ✅ MySQL Storage: Organizes and maintains structured data
 ✅ Power BI Reports: Provides visual insights into car pricing trends and market dynamics
 
 ⚙️ Tech Stack
-Python 🐍 (BeautifulSoup, Requests, Pandas) for Web Scraping
+Python 🐍 (Selenium, Requests, Pandas) for Web Scraping
 MySQL 🗄️ for Data Storage
 Power BI 📊 for Report Generation
 
 Project Structure
-📦 cardekhodataanalytics
+📦 UsedCarAnalytics
 ├── 📂 data                # Contains scraped data before inserting into MySQL
 ├── 📂 sql                 # MySQL database schema and queries
 ├── 📂 reports             # Power BI reports and dashboards
-├── 📜 cardekho_scrapper.py          # Web scraping script using BeautifulSoup
-├── 📜 database.py         # MySQL database connection and operations
+├── 📂 python              # Web scraping script using BeautifulSoup
 ├── 📜 requirements.txt    # Python dependencies
 └── 📜 README.md           # Project documentation
+
 🛠️ Setup & Installation
 1️⃣ Install Dependencies
 Ensure Python and MySQL are installed, then install required Python libraries:
-
 pip install -r requirements.txt
+
 2️⃣ Database Setup
 CREATE SCHEMA `car_details` ;
-
-Create the used_cars table:
-
 CREATE TABLE `used_cars` (
   `name` varchar(255) NOT NULL,
   `price` int DEFAULT NULL,
@@ -66,9 +63,3 @@ Load data and build visualizations
 🔹 Automate data updates with a scheduled job
 🔹 Integrate Machine Learning for price predictions
 🔹 Build an interactive web dashboard
-
-👨‍💻 Contributing
-Feel free to fork this repository and create pull requests! Contributions are always welcome.
-
-📄 License
-This project is licensed under the MIT License.
